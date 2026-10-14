@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking | Garuda Jaya Stadium</title>
+    <link rel="icon" href="assets/Designer.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="booking">
+    <header class="site-header"><a class="brand" href="index.html"><img src="assets/Designer.png" alt="" width="36"
+                height="36">Garuda Jaya Stadium</a><button class="menu-btn" aria-label="Buka menu"
+            aria-expanded="false">Menu</button>
+        <nav id="nav"><a href="index.html" data-p="index">Beranda</a><a href="about.html" data-p="about">Tentang</a><a
+                href="booking.html" data-p="booking">Booking</a><a href="contact.html" data-p="contact">Layanan
+                Pengaduan</a></nav>
+    </header>
+    <main>
+        <section class="wrap narrow">
+            <h1>Booking lapangan</h1>
+            <p class="lead">Isi formulir. Pesanan dikirim ke WhatsApp admin untuk dikonfirmasi.</p>
+            <form id="bookingForm" class="form">
+                <label>Nama lengkap *<input name="nama" required></label>
+                <label>Nomor HP *<input name="hp" type="tel" required></label>
+                <label>Lapangan *
+                    <select name="lapangan" required>
+                        <option value="fun-match" data-harga="150000">Fun Match - Rp150.000/jam</option>
+                        <option value="vs-garuda" data-harga="50000">Fun Match Vs Garuda Jaya - Rp50.000/jam</option>
+                        <option value="fun-wasit" data-harga="300000">Fun Match dengan Wasit - Rp300.000/jam</option>
+                        <option value="latihan" data-harga="100000">Lapangan Latihan - Rp100.000/sesi</option>
+                    </select>
+                </label>
+                <label>Tanggal *<input name="tanggal" type="date" required></label>
+                <p class="warning" id="peringatan" hidden></p>
+                <label>Jam mulai *<input name="jam" type="time" required></label>
+                <p class="estimate">Perkiraan biaya: <strong id="estimasi">Rp0</strong></p>
+                <button class="btn" type="submit">Kirim via WhatsApp</button>
+            </form>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p>© 2026 Garuda Jaya Stadium. Semua hak dilindungi.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
